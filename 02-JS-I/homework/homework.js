@@ -179,8 +179,8 @@ function esPositivo(numero) {
   //Si el número es 0, devuelve false
   if (numero != 0 ) {
     if (numero > 0) {
-      console.log('\"Es positivo\"');
-    }else console.log('\"Es Negativo\"');
+      return'Es positivo';
+    }else return'Es negativo';
   }else return false;
 }
 
@@ -189,21 +189,21 @@ function agregarSimboloExclamacion(str) {
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
 
-  console.log(str + '!');
+  return(str + '!');
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  console.log(nombre + ' ' + apellido);
+  return(nombre + ' ' + apellido);
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  console.log('"'+ 'Hola ' + nombre + '!'+ '"');
+  return('Hola '+ nombre + '!');
   
 }
 
@@ -246,10 +246,10 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   if (letra.length === 1) {
-    if (["a", "e", "i", "o", "u"].includes(char.toLowerCase())) {
-      console.log('"Es Vocal"')
-    }else console.log(' "Dato Incorrecto"');
-  }else console.log(' "Dato Incorrecto"');
+    if (["a", "e", "i", "o", "u"].includes(letra.toLowerCase())) {
+      return'Es vocal'
+    }else return 'Dato incorrecto';
+  }else return'Dato incorrecto';
 }
 
 
