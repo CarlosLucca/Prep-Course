@@ -38,7 +38,7 @@ function conection(status) {
 
   if (status === 1) {
     return 'Online';
-  }if (staus === 2) {
+  }else if (status === 2) {
     return 'Away';
   } else {
     return 'Offline';
@@ -117,10 +117,10 @@ function esDiezOCinco(numero) {
   // Tu código:
   switch (numero) {
     case 10:
-      return  5;
+      return  true;
       break;
     case 5:
-      return 5;
+      return true;
       break;
     default:
       return false
@@ -151,7 +151,7 @@ function esEntero(numero) {
   // Tu código:
   //ocupo el Number.isInteger porque me da true captar si es un entero, false si le pasamos cualquier otro tipo de dato
   // si ocupo Math.floor('s') paso un string me da NaN
-  if (Number.isInteger(number)) {
+  if (Number.isInteger(numero)) {
     return true;
   }else return false;
 
@@ -185,8 +185,12 @@ function operadoresLogicos(num1, num2, num3) {
   if ((num1 === 0 ) || (num2 === 0) || (num3 === 0)) {
     return 'Error';
   }else{
-    if ((num1 > num2) && (num1 > num3) && (Math.sign (num1) === 1) ) {
-      return 'Numero 1 es mayor y positivo'
+    if ((num1 < 0) || (num3< 0) || (num2 < 0)) {
+      return 'Hay negativos'
+    }else if ((num1 > num2) && (num1 > num3) && (Math.sign (num1) === 1) ) {
+      return 'Número 1 es mayor y positivo'
+    }else if ((num3 > num2) && (num3 > num1)){
+      return num3 += 1;
     }
   }
   return false;
@@ -204,7 +208,7 @@ function esPrimo(numero) {
     return false;
   } else {
     for (let index = 2; index < numero; index++){
-      if ((numero % i) === 0) {
+      if ((numero % index) === 0) {
         primo = false;
       }
     }
@@ -225,8 +229,8 @@ function esVerdadero(valor){
     }else return 'Soy Falso'
   }*/
   if (valor) {
-    return 'Soy Verdadero'
-  }else return 'Soy Falso'
+    return 'Soy verdadero'
+  }else return 'Soy falso'
 
 
 
@@ -246,9 +250,15 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if ((numero.ToString().lenght) ===  3) {
-      return true;
-  }else return false
+  let ctrlNumero = numero
+  let count = 0;
+  while (ctrlNumero >=1) {
+    count = count + 1;
+    ctrlNumero = ctrlNumero / 10;
+  }
+  if (count === 3 ) {
+    return true;
+  }else return false;
 }
 
 function doWhile(numero) {
