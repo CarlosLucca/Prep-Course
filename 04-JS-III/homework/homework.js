@@ -73,7 +73,7 @@ function dePalabrasAFrase(palabras) {
               stringTemporal = stringTemporal + palabras[i];
             }
             else{
-              stringTemporal= stringTemporal +array[i] + ' ';}
+              stringTemporal= stringTemporal +palabras[i] + ' ';}
     }
     return stringTemporal;
 }
