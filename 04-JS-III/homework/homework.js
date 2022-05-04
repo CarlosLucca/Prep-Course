@@ -150,7 +150,7 @@ if  (arguments.length === 0){
   		for (let index = 0; index < arguments.length; index++) {
 				numerobase = numerobase * arguments[index];
       }
-	}
+	}return numerobase;
 }
 
 
