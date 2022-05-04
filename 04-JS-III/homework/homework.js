@@ -3,18 +3,27 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+ /* for (let index = 0; index < array.length; index++) {
+    if (index === 0) {
+      return array[index];
+    }  
+  }*/
+
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return array[array.length - 1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length;
 }
 
 
@@ -23,6 +32,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+
+  for (let index = 0; index < array.length; index++) {
+      array[index] = array[index] + 1;  
+  }
+  return array;
 }
 
 
@@ -30,6 +44,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento);
+  return array;
 }
 
 
@@ -38,6 +54,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -47,6 +65,16 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+
+
+  var stringTemporal ='';
+    for (var i = 0; i < palabras.length; i++) {
+            if (i === (palabras.length-1)){
+              stringTemporal = stringTemporal + palabras[i];
+            }
+            else{stringTemporal= array[i] + ' ';}
+    }
+    return stringTemporal;
 }
 
 
