@@ -72,7 +72,8 @@ function dePalabrasAFrase(palabras) {
             if (i === (palabras.length-1)){
               stringTemporal = stringTemporal + palabras[i];
             }
-            else{stringTemporal= palabras[i] + ' ';}
+            else{
+              stringTemporal= stringTemporal +array[i] + ' ';}
     }
     return stringTemporal;
 }
